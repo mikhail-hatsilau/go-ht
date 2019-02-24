@@ -1,9 +1,9 @@
 package main
 
-func Filter(input []int, filter func(int, int) bool) []int {
+func Filter(input []int, predicate func(int, int) bool) []int {
 	var output []int
 	for index, value := range input {
-		if (filter(value, index)) {
+		if (predicate(value, index)) {
 			output = append(output, value)
 		}
 	}
@@ -11,4 +11,5 @@ func Filter(input []int, filter func(int, int) bool) []int {
 }
 
 func main() {
+
 }
