@@ -63,10 +63,10 @@ Example of the json file (users.json):
 In the main.go file you can find a function called Perform(args Arguments, writer io.Writer) error.
 You have to call this function from the main function and pass arguments from the console and os.Stdout stream. Perform function body you have to write by yourself :).
 Arguments - is a `map[string]string` with the following fields:
-`id, item, operation and fileName
+`id, item, operation and fileName`
 Arguments should be passed via console flags:
 `./main.go -operation «add» -item ‘{«id»: "1", «email»: «email@test.com», «age»: 23}’ -fileName «users.json»`
-`-operation`, `-item`and `-fileName` are console flags. To parse them and build structure you can take a Look at «flag» package: https://golang.org/pkg/flag/.
+`-operation`, `-item`and `-fileName` are console flags. To parse them and build map you can take a Look at «flag» package: https://golang.org/pkg/flag/.
 Pay attention that `-fileName` flag should be provided every time with the name of file where you store users!
 
 #### Getting list of items:
